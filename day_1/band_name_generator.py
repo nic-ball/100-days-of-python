@@ -1,5 +1,5 @@
-print("Welcome to Band Name Generator\n")
-city = input("What Town/City did you grow up in? \n")
-pet = input("What is the name or your pet? \n")
-band_name = city + " " + pet
-print("Your new band name is: ", band_name)
+print("Welcome to Band Name Generator.\n")
+city = str(input("What Town/City did you grow up in? \n"))
+pet = str(input("What is the name or your pet? \n"))
+band_name = (city + " " + pet)
+print("Your new band name is: ", (band_name))
