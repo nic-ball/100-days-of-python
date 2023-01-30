@@ -8,19 +8,23 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-rand_letters = random.choices(letters, k=nr_letters)
-rand_numbers = random.choices(numbers, k=nr_numbers)
-rand_symbols = random.choices(symbols, k=nr_symbols)
+password_list = []
 
-total_length = (nr_letters + nr_numbers + nr_symbols)
+for char in range(1, nr_letters + 1):
+    password_list.append(random.choice(letters))
 
-# print(rand_letters)
-# print(rand_numbers)
-# print(rand_symbols)
+for char in range(1, nr_symbols + 1):
+    password_list += random.choice(symbols)
 
-merged = [*rand_letters, *rand_numbers, *rand_symbols]
+for char in range(1, nr_numbers + 1):
+    password_list += random.choice(numbers)
 
-pre_pass = ''.join(merged)
-# print(pre_pass)
-password = ''.join(random.sample(pre_pass, k=total_length))
-print(f"Your totally random password is: {password}")
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+
+password = ""
+for char in password_list:
+    password += char
+
+print(f"Your password is: {password}")
