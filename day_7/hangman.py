@@ -1,3 +1,4 @@
+""" Hangman """
 import random
 
 word_list = [
