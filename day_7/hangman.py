@@ -97,24 +97,18 @@ word_list = [
 
 chosen_word = random.choice(word_list)
 print(chosen_word)
-guess = input("Guess a letter: ").lower()
+
 
 display = []
+word_length = len(chosen_word)
+for _ in range(len(chosen_word)):
+    display += "_"
+print(display)
 
-lives = len(chosen_word - 1)
+guess = input("Guess a letter: ").lower()
 
-
-def guesses():
-    for letter in chosen_word:
-        if letter == guess:
-            display.append(letter)
-        else:
-            display.append("_")
-    return display
-
-
-while display != chosen_word:
-    for char in range(1, chosen_word + 1):
-        lives -= 1
-
-print(lives)
+for position in range(word_length):
+    letter = chosen_word[position]
+    if letter == guess:
+        display[position] = letter
+print(display)
