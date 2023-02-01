@@ -66,8 +66,19 @@ word_list = [
     "Diamond",
     "Dress",
     "Drill",
+    "Drink",
+    "Drum",
+    "Dung",
+    "Ears",
+    "Earth",
+    "Egg",
+    "Electricity",
+    "Elephant",
+    "Eraser",
+    "Explosive",
+    "Eyes",
+    "Family",
 ]
-#  Drink, Drum, Dung, Ears, Earth, Egg, Electricity, Elephant, Eraser, Explosive, Eyes, Family,
 #  Fan, Feather,
 #  Festival, Film Finger, Fire, Floodlight, Flower, Foot, Fork, Freeway, Fruit, Fungus, Game,
 #  Garden, Gas, Gate, Gemstone, Girl, Gloves, God, Grapes, Guitar, Hammer, Hat, Hieroglyph, Highway,
@@ -85,13 +96,15 @@ word_list = [
 #  Vacuum, Vampire, Videotape, Vulture, Water, Weapon, Web, Wheelchair, Window, Woman, Worm, X-ray"]
 
 chosen_word = random.choice(word_list)
+print(chosen_word)
+guess = input("Guess a letter: ").lower()
 
-guess = input("Guess a letter: ")
-guess = guess.lower()
-# print(guess)
+display = []
 
 for letter in chosen_word:
-    if guess == letter:
-        print(letter)
+    if letter == guess:
+        display.append(letter)
     else:
-        print("_")
+        display.append("_")
+
+print(display)
