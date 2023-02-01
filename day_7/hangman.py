@@ -101,10 +101,20 @@ guess = input("Guess a letter: ").lower()
 
 display = []
 
-for letter in chosen_word:
-    if letter == guess:
-        display.append(letter)
-    else:
-        display.append("_")
+lives = len(chosen_word - 1)
 
-print(display)
+
+def guesses():
+    for letter in chosen_word:
+        if letter == guess:
+            display.append(letter)
+        else:
+            display.append("_")
+    return display
+
+
+while display != chosen_word:
+    for char in range(1, chosen_word + 1):
+        lives -= 1
+
+print(lives)
