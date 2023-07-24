@@ -7,3 +7,4 @@
 - Day 5 - Loops, fizz_buzz, gaussmath problem, highest score, Random password generator.
 - Day 6 - Solution for Reeborg maze and hurdles.
 - Day 7 - Hangman Project
+- Day 8 - 
