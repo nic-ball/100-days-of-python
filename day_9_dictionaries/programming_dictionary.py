@@ -25,3 +25,29 @@ programming_dictionary["Bug"] = "A moth in your computer"
 for key in programming_dictionary:
     print(key)
     print(programming_dictionary[key])
+
+#Nesting
+capitals = {
+    "France": "Paris",
+    "Germany": "Berlin",
+}
+
+#Nesting a list in a Dictionary
+
+travel_log = {
+    "France": ["Paris", "Calais", "Disneyland"],
+    "Germany": ["Frankfurt", "Koln", "Frondenburg", "Winterburg"],
+}
+
+# Nesting Dictionary in a Dictionary
+travel_log = [
+    {"country": "France", 
+    "cities_visited": ["Paris", "Calais", "Disneyland"], 
+    "total_visits": 5},
+    {"country": "Germany", "cities_visited": ["Frankfurt", "Koln", "Frondenburg", 
+    "Winterburg", "Dortmund", "Munich"], 
+    "total_visits": 2},
+]
+
+print(travel_log)
+
