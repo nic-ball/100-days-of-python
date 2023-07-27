@@ -41,13 +41,17 @@ travel_log = {
 
 # Nesting Dictionary in a Dictionary
 travel_log = [
-    {"country": "France", 
-    "cities_visited": ["Paris", "Calais", "Disneyland"], 
-    "total_visits": 5},
-    {"country": "Germany", "cities_visited": ["Frankfurt", "Koln", "Frondenburg", 
-    "Winterburg", "Dortmund", "Munich"], 
-    "total_visits": 2},
+    {
+        "country": "France", 
+        "cities_visited": ["Paris", "Calais", "Disneyland"], 
+        "total_visits": 5
+    },
+    {
+        "country": "Germany", 
+        "cities_visited": ["Frankfurt", "Koln", "Frondenburg", 
+        "Winterburg", "Dortmund", "Munich"], 
+        "total_visits": 2
+    },
 ]
 
 print(travel_log)
-
